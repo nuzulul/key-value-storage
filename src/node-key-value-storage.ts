@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-export class Kvs{
+export class Nkvs{
 
 	_dataDirName:string
 	_storageName:string

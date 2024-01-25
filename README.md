@@ -1,7 +1,7 @@
 # key-value-storage
 Create data storage that uses a simple key-value method
 
-[![NPM](https://nodei.co/npm/key-value-storage.png?mini=true)](https://www.npmjs.com/package/key-value-storage)
+[![NPM](https://nodei.co/npm/node-key-value-storage.png?mini=true)](https://www.npmjs.com/package/node-key-value-storage)
 
 ## Features
 
@@ -16,19 +16,19 @@ Create data storage that uses a simple key-value method
 ## Installation
 
 ```javascript
-npm install key-value-storage
+npm install node-key-value-storage
 ```
 
 ## Initialization
 
 ```javascript
 //ES Modules import style
-import {Kvs} from 'key-value-storage'
+import {Nkvs} from 'node-key-value-storage'
 
 //CommonJS import style
-const {Kvs} = require('key-value-storage')
+const {Nkvs} = require('node-key-value-storage')
 
-const kvs = new Kvs({
+const nkvs = new Nkvs({
 	storageName:'mystorage'
 })
 ```
@@ -36,32 +36,30 @@ const kvs = new Kvs({
 ## Example Usage
 
 ```javascript
-import {Kvs} from 'key-value-storage'
+import {Nkvs} from 'node-key-value-storage'
 
 void async function main() {
-	const kvs = new Kvs({
+	const nkvs = new Nkvs({
 		storageName:'mystorage'
 	})
-	console.log(kvs._storageName)
-	console.log(await kvs.put('yes','no'))
-	console.log(await kvs.get('yes'))
-	console.log(await kvs.list())
-	console.log(await kvs.delete('yes'))
+	console.log(await nkvs.put('yes','no'))
+	console.log(await nkvs.get('yes'))
+	console.log(await nkvs.list())
+	console.log(await nkvs.delete('yes'))
 }()
 ```
 
 ```javascript
-const {Kvs} = require('key-value-storage')
+const {Nkvs} = require('node-key-value-storage')
 
 void async function main() {
-	const kvs = new Kvs({
+	const nkvs = new Nkvs({
 		storageName:'mystorage'
 	})
-	console.log(kvs._storageName)
-	console.log(await kvs.put('yes','no'))
-	console.log(await kvs.get('yes'))
-	console.log(await kvs.list())
-	console.log(await kvs.delete('yes'))
+	console.log(await nkvs.put('yes','no'))
+	console.log(await nkvs.get('yes'))
+	console.log(await nkvs.list())
+	console.log(await nkvs.delete('yes'))
 }()
 ```
 

@@ -1,13 +1,13 @@
 {
-  "name": "key-value-storage",
+  "name": "node-key-value-storage",
   "version": "1.0.0",
   "description": "Create data storage that uses a simple key-value method",
-  "main": "dist/cjs/key-value-storage.js",
-  "module": "dist/mjs/key-value-storage.js",
+  "main": "dist/cjs/node-key-value-storage.js",
+  "module": "dist/mjs/node-key-value-storage.js",
   "exports": {
     ".": {
-      "import": "./dist/mjs/key-value-storage.js",
-      "require": "./dist/cjs/key-value-storage.js"
+      "import": "./dist/mjs/node-key-value-storage.js",
+      "require": "./dist/cjs/node-key-value-storage.js"
     }
   },
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nuzulul/key-value-storage.git"
+    "url": "git+https://github.com/nuzulul/node-key-value-storage.git"
   },
   "keywords": [
     "nodejs",
@@ -35,14 +35,15 @@
     "nosql-database",
     "file-storage",
     "kv-storage",
-    "key-value-storage"
+    "key-value-storage",
+	"node-key-value-storage"
   ],
   "author": "Nuzulul Zulkarnain",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nuzulul/key-value-storage/issues"
+    "url": "https://github.com/nuzulul/node-key-value-storage/issues"
   },
-  "homepage": "https://github.com/nuzulul/key-value-storage#readme",
+  "homepage": "https://github.com/nuzulul/node-key-value-storage#readme",
   "devDependencies": {
     "nodemon": "^3.0.3",
     "ts-node": "^10.9.2",

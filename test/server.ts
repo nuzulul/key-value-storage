@@ -1,15 +1,15 @@
-import {Kvs} from './../src/key-value-storage'
+import {Nkvs} from './../src/node-key-value-storage'
 
 void async function main() {
 
-	const kvs = new Kvs({
+	const nkvs = new Nkvs({
 		storageName:'mystorage'
 	})
-	console.log(kvs._storageName)
-	console.log(await kvs.put('yes','no'))
-	console.log(await kvs.get('yes'))
-	console.log(await kvs.delete('yes'))
-	console.log(await kvs.get('yes'))
-	console.log(await kvs.put('yes1','no1'))
-	console.log(await kvs.list())
+	console.log(nkvs._storageName)
+	console.log(await nkvs.put('yes','no'))
+	console.log(await nkvs.get('yes'))
+	console.log(await nkvs.delete('yes'))
+	console.log(await nkvs.get('yes'))
+	console.log(await nkvs.put('yes1','no1'))
+	console.log(await nkvs.list())
 }()
