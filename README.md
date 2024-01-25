@@ -1,4 +1,4 @@
-# key-value-storage
+# node-key-value-storage
 Create data storage that uses a simple key-value method
 
 [![NPM](https://nodei.co/npm/node-key-value-storage.png?mini=true)](https://www.npmjs.com/package/node-key-value-storage)
