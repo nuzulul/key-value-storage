@@ -1,6 +1,6 @@
 {
   "name": "node-key-value-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create data storage that uses a simple key-value method",
   "main": "dist/cjs/node-key-value-storage.js",
   "module": "dist/mjs/node-key-value-storage.js",

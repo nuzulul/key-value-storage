@@ -2,10 +2,9 @@ import {Nkvs} from './../src/node-key-value-storage'
 
 void async function main() {
 
-	const nkvs = new Nkvs({
+	const nkvs = await Nkvs.init({
 		storageName:'mystorage'
 	})
-	console.log(nkvs._storageName)
 	console.log(await nkvs.put('yes','no'))
 	console.log(await nkvs.get('yes'))
 	console.log(await nkvs.delete('yes'))
