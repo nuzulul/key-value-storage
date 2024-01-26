@@ -7,7 +7,7 @@ Create data storage that uses a simple key-value method
 ## Features
 
 * ✅ 0 Dependencies
-* ✅ NoSQL
+* ✅ NoSQL Database
 * ✅ Lightwight
 
 ## Demo
@@ -29,7 +29,7 @@ import {Nkvs} from 'node-key-value-storage'
 //CommonJS import style
 const {Nkvs} = require('node-key-value-storage')
 
-const nkvs = await Nkvs.init({
+const db = await Nkvs.init({
 	storageName:'mystorage'
 })
 ```
@@ -40,14 +40,14 @@ const nkvs = await Nkvs.init({
 import {Nkvs} from 'node-key-value-storage'
 
 void async function main() {
-	const nkvs = await Nkvs.init({
+	const db = await Nkvs.init({
 		storageName:'mystorage'
 	})
 	
-	console.log(await nkvs.put('yes','no'))
-	console.log(await nkvs.get('yes'))
-	console.log(await nkvs.list())
-	console.log(await nkvs.delete('yes'))
+	console.log(await db.put('yes','no'))
+	console.log(await db.get('yes'))
+	console.log(await db.list())
+	console.log(await db.delete('yes'))
 }()
 ```
 
@@ -55,14 +55,14 @@ void async function main() {
 const {Nkvs} = require('node-key-value-storage')
 
 void async function main() {
-	const nkvs = await Nkvs.init({
+	const db = await Nkvs.init({
 		storageName:'mystorage'
 	})
 	
-	console.log(await nkvs.put('yes','no'))
-	console.log(await nkvs.get('yes'))
-	console.log(await nkvs.list())
-	console.log(await nkvs.delete('yes'))
+	console.log(await db.put('yes','no'))
+	console.log(await db.get('yes'))
+	console.log(await db.list())
+	console.log(await db.delete('yes'))
 }()
 ```
 
@@ -76,7 +76,7 @@ await init({
 	storageName:string 
 })
 ```
-* dataDirName =  (Optional) Alphanumeric name of data directory (default = data)
+* dataDirName =  (Optional) Alphanumeric name of data directory (default = 'data')
 * storageName = (Required) Alphanumeric name of storage
 
 ### Write key-value pairs
@@ -85,8 +85,8 @@ await init({
 await put(key:string,value:string)
 ```
 The put() method returns a Promise that you should await on to verify a successful update which resolves with a boolean :
-* true = Successful update
-* false = Failed update
+* true = Update successful
+* false = Update failed
 ### Read key-value pairs
 
 ```javascript
@@ -94,8 +94,8 @@ await get(key:string)
 ```
 The get() method returns a promise you can await on to get the value which resolves with:
 * null = The key is not found
-* data = Success get the value
-* false = Failed to get the value
+* data = Get the value successful
+* false = Get the value failed
 
 ### List keys
 
@@ -114,8 +114,8 @@ await delete(key:string)
 
 To delete a key-value pair, call the delete() method, return a promise which resolves with:
 * null = The key is not found
-* true = Successful delete
-* false = Failed delete
+* true = Delete successful
+* false = Delete failed
 
 ## License
 
