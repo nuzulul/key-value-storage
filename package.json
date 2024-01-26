@@ -1,6 +1,6 @@
 {
   "name": "node-key-value-storage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create data storage that uses a simple key-value method",
   "main": "dist/cjs/node-key-value-storage.js",
   "module": "dist/mjs/node-key-value-storage.js",
@@ -22,6 +22,10 @@
     "prepare-build": "if exist .\\dist (echo ok) && mkdir dist && del /S /Q .\\dist\\*",
     "prepare-build-win": "if not exist .\\dist (mkdir dist) else (rmdir /S /Q .\\dist\\)"
   },
+  "files": [
+    "dist/",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nuzulul/node-key-value-storage.git"

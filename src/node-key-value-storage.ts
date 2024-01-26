@@ -2,22 +2,16 @@ import fs from 'fs'
 
 export class Nkvs{
 
-	_dataDirName:string
-	_storageName:string
 	_storageDir:string
 	
 	private constructor({
-		dataDirName = "data",
-		storageName
+		storageDir
 	}:{
-		dataDirName?:string,
-		storageName:string
+
+		storageDir:string
 	}){
-		if(!this.isAlphanumeric(dataDirName))this.showError('dataDir must be Alphanumeric')
-		if(!this.isAlphanumeric(storageName))this.showError('namespace must be Alphanumeric')
-		this._dataDirName = "./"+dataDirName
-		this._storageName = storageName
-		this._storageDir = this._dataDirName+'/'+storageName
+
+		this._storageDir = storageDir
 	}
 
 	private isAlphanumeric(str:string) {
@@ -56,12 +50,12 @@ export class Nkvs{
 			})
 		}
 
-		if(!isAlphanumeric(dataDirName))showError('dataDir must be Alphanumeric')
-		if(!isAlphanumeric(storageName))showError('namespace must be Alphanumeric')
+		if(!isAlphanumeric(dataDirName))showError('dataDirName must be Alphanumeric')
+		if(!isAlphanumeric(storageName))showError('storageName must be Alphanumeric')
 		let _dataDirName = "./"+dataDirName
 		let storageDir = _dataDirName+'/'+storageName
 		await makeDir(storageDir)
-		return new Nkvs({storageName})
+		return new Nkvs({storageDir})
 	}
 
 	
